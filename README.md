@@ -1,5 +1,5 @@
 ## schedule-nginx-deployment
-this branch needs k8s cluster
+this needs kind k8s cluster
 ```
 $ brew install kind
 ```
