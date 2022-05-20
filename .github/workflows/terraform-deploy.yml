@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Terraform init
-        uses: ./.github/actions/terraform-init
+        uses: ./.github/actions/setup
       
       - name: Terraform test
         run: cd test && go test -v -timeout 2000s infra_test.go

@@ -6,7 +6,7 @@
   #       uses: actions/checkout@v2
 
   #     - name: Terraform init
-  #       uses: ./.github/actions/terraform-init
+  #       uses: ./.github/actions/setup
 
   #     - name: Terraform format
   #       run: terraform fmt -check
