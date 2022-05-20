@@ -9,7 +9,7 @@ resource "helm_release" "nginx" {
 
   set {
     name  = "replicaCount"
-    value = "3"
+    value = var.replica
   }
 
   depends_on = [

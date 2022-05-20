@@ -11,6 +11,12 @@ variable "namespace" {
   description = "kubernetes namespace"
 }
 
+variable "tag" {
+  type        = string
+  default     = "terraform-eks-cluster"
+  description = "tag for aws resources"
+}
+
 variable "kubernetes_version" {
   type        = string
   default     = "1.22"
@@ -39,4 +45,10 @@ variable "nginx_version" {
   type        = string
   default     = "4.1.0"
   description = "nginx chart version"
+}
+
+variable "replica" {
+  type        = string
+  default     = "3"
+  description = "number of nginx replica"
 }

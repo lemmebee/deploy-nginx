@@ -8,12 +8,16 @@ data "aws_region" "current" {
 data "aws_availability_zones" "available" {
 }
 
+locals {
+  tag = var.tag
+}
+
 resource "aws_vpc" "this" {
   cidr_block           = "10.0.0.0/16"
   enable_dns_support   = true
   enable_dns_hostnames = true
   tags = {
-    "Name" = "terraform-eks-cluster"
+    Name = local.tag
   }
 }
 
@@ -26,7 +30,7 @@ resource "aws_subnet" "this" {
   map_public_ip_on_launch = true
 
   tags = {
-    "Name" = "terraform-eks-cluster"
+    Name = local.tag
   }
 }
 
@@ -34,7 +38,7 @@ resource "aws_internet_gateway" "this" {
   vpc_id = aws_vpc.this.id
 
   tags = {
-    Name = "terraform-eks-cluster"
+    Name = local.tag
   }
 }
 
