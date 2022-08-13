@@ -1,5 +1,5 @@
 # deploy-nginx
-deploy nginx will deploy surprisingly four replicas of nginx on eks cluster with k8s deployment
+deploy nginx will deploy surprisingly four replicas of nginx on eks cluster with k8s deployment distributed on three nodes
 
 ## Setup
 These enviroment variables are required:
@@ -15,6 +15,11 @@ $ terraform init
 ```
 $ terraform apply
 ```
+
+## Output
+```cluster_endpoint```: K8s cluster endpoint
+
+```lb_ip```: Load balancer ip for k8s cluster
 
 ## Destroy
 ```
