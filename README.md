@@ -7,7 +7,7 @@ These enviroment variables are required:
 - AWS_ACCESS_KEY_ID
 - AWS_SECRET_ACCESS_KEY
 
-Create local kind cluster
+Create local kind cluster:
 
 ```
 brew install kind
@@ -16,7 +16,7 @@ kind get clusters
 kubectl cluster-info --context kind-nginx
 ```
 
-You need to get cluster configurations from ```~/.kube/config``` and apply it on ```terraform.tfvars```
+You need to get cluster configurations from ```~/.kube/config``` and apply it on ```terraform.tfvars``` then you can run:
 
 ```
 terraform init
@@ -26,11 +26,6 @@ terraform init
 ```
 terraform apply
 ```
-
-## Output
-```cluster_endpoint```: K8s cluster endpoint
-
-```lb_ip```: Load balancer ip for k8s cluster
 
 ## Destroy
 ```
