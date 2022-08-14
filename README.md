@@ -1,33 +1,3 @@
-
-Run test
-
-```
-cd test && go test -v -timeout 2000s infra_test.g
-``
-
-Deploy 3 replicas of nginx
-
-```
-
-terraform init
-
-```
-
-```
-
-terraform apply
-
-```
-
-```
-
-terraform destroy
-
-```
-
-```
-
-
 # deploy-nginx
 deploy nginx will deploy surprisingly four replicas of nginx on eks cluster using helm release distributed on three nodes
 
