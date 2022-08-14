@@ -14,7 +14,7 @@ $ terraform init
 ## Test
 
 ```
-cd test && go test -v -timeout 3000s infra_test.go
+cd test && go test -v -timeout 2000s infra_test.go
 ```
 
 ## Deploy 
